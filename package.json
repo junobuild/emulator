@@ -1,0 +1,22 @@
+{
+  "name": "@junobuild/emulator",
+  "version": "0.0.1",
+  "description": "A local emulator suite to build and test Juno's satellites",
+  "author": "David Dal Busco (https://daviddalbusco.com)",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "format": "prettier . --write",
+    "collections": "node scripts/collections.mjs"
+  },
+  "devDependencies": {
+    "@dfinity/identity": "^0.15.4",
+    "@dfinity/identity-secp256k1": "^0.15.4",
+    "@junobuild/admin": "^0.0.9",
+    "dotenv": "^16.0.3",
+    "node-fetch": "^3.3.1",
+    "pem-file": "^1.0.1",
+    "prettier": "^2.8.6",
+    "prettier-plugin-organize-imports": "^3.2.2"
+  }
+}

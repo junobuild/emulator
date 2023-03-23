@@ -1,0 +1,19 @@
+{
+  "collections": {
+    "db": [
+      {
+        "collection": "demo",
+        "read": "managed",
+        "write": "managed"
+      }
+    ],
+    "storage": [
+      {
+        "collection": "images",
+        "read": "managed",
+        "write": "managed",
+        "max_size": 5000
+      }
+    ]
+  }
+}
