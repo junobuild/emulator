@@ -12,6 +12,7 @@ To run a satellite locally, you will need the following software:
 
 - [NodeJS](https://nodejs.org/en) (LTS)
 - [dfx](https://github.com/dfinity/sdk) (last version)
+- [didc](https://github.com/dfinity/candid/releases) (last release)
 
 ## Getting started
 
