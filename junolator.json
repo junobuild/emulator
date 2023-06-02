@@ -15,5 +15,6 @@
         "max_size": 5000
       }
     ]
-  }
+  },
+  "controllers": ["enter-here-valid-principals"]
 }

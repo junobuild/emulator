@@ -1,31 +1,14 @@
 #!/usr/bin/env node
 
 import {listRules, setRule} from '@junobuild/admin';
-import {config} from 'dotenv';
-import fetch from 'node-fetch';
-import {readFile} from 'node:fs/promises';
-import {initIdentity} from './identity.utils.mjs';
-
-config();
-
-const satellite = {
-  satelliteId: process.env.CANISTER_ID_satellite,
-  fetch,
-  identity: initIdentity(),
-  env: 'dev'
-};
+import {readConfig} from './config.utils.mjs';
+import {satellite} from './satellite.utils.mjs';
 
 const list = async (type) =>
   listRules({
     type,
     satellite
   });
-
-const readConfig = async () => {
-  const buffer = await readFile('./junolator.json');
-  const {collections} = JSON.parse(buffer.toString('utf-8'));
-  return collections;
-};
 
 const configRules = async ({type, rules}) => {
   const existingRules = await list(type);
@@ -45,7 +28,9 @@ const configRules = async ({type, rules}) => {
 };
 
 const setCollections = async () => {
-  const {db, storage} = await readConfig();
+  const {
+    collections: {db, storage}
+  } = await readConfig();
 
   await Promise.all([
     configRules({type: 'db', rules: db}),
