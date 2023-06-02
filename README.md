@@ -90,6 +90,18 @@ Once you have finished configuring the necessary settings, you can apply the cha
 
 You can run the above command to change your configuration as many times as you need. However, please note that each time you run the command, the configuration will be overwritten, and you will not be able to delete any fields.
 
+## Additional features
+
+Few additional features are available.
+
+### Set a controller
+
+To configure an additional controller with "Read+Write" permission, update the `junolator.json` file on your local machine. Edit the `controllers` field, providing a list of principals. Then run the specified command.
+
+```bash
+./junolator ctrl
+```
+
 ## License
 
 MIT © [David Dal Busco](mailto:david.dalbusco@outlook.com)

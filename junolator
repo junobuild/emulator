@@ -52,4 +52,7 @@ case $1 in
   config)
     node scripts/collections.mjs
     ;;
+  ctrl)
+    node scripts/controllers.mjs
+    ;;
 esac
