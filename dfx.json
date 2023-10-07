@@ -15,7 +15,7 @@
     "satellite": {
       "type": "custom",
       "candid": "https://raw.githubusercontent.com/buildwithjuno/juno/main/src/satellite/satellite.did",
-      "wasm": "https://github.com/buildwithjuno/juno/releases/download/v0.0.12/satellite-v0.0.9.wasm.gz",
+      "wasm": "https://github.com/junobuild/juno/releases/download/v0.0.12/satellite-v0.0.9.wasm.gz",
       "shrink": false,
       "dependencies": ["internet_identity"]
     }

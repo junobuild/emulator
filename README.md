@@ -17,7 +17,7 @@ To run a satellite locally, you will need the following software:
 ## Getting started
 
 ```
-git clone https://github.com/buildwithjuno/emulator
+git clone https://github.com/junobuild/emulator
 cd emulator
 ```
 
