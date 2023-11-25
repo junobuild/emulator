@@ -58,6 +58,7 @@ Config has to be defined with following values:
 - `collection`: the name of the collection (a `string`)
 - `read`: read permissions (`public` | `private` | `managed` | `controllers`)
 - `write`: read permissions (`public` | `private` | `managed` | `controllers`)
+- `memory`: the type of memory (`heap` | `stable`)
 - `max_size`: an option specific to the `storage` that limits the size of the asset that can be uploaded (a `number`)
 
 ```json
@@ -67,7 +68,8 @@ Config has to be defined with following values:
       {
         "collection": "demo",
         "read": "managed",
-        "write": "managed"
+        "write": "managed",
+        "memory": "heap"
       }
     ],
     "storage": [
@@ -75,6 +77,7 @@ Config has to be defined with following values:
         "collection": "images",
         "read": "managed",
         "write": "managed",
+        "memory": "stable",
         "max_size": 5000
       }
     ]

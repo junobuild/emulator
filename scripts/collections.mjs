@@ -14,13 +14,15 @@ const configRules = async ({type, rules}) => {
   const existingRules = await list(type);
 
   await Promise.all(
-    rules.map((rule) =>
+    rules.map(({collection, memory, ...rest}) =>
       setRule({
         type,
         satellite,
         rule: {
-          ...(existingRules.find(({collection}) => collection === rule.collection) ?? {}),
-          ...rule
+          ...(existingRules.find(({collection: existingCollection}) => existingCollection === collection) ?? {}),
+          collection,
+          memory: memory === "stable" ? "Stable" : "Heap",
+          ...rest
         }
       })
     )
