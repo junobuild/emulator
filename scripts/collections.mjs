@@ -19,9 +19,11 @@ const configRules = async ({type, rules}) => {
         type,
         satellite,
         rule: {
-          ...(existingRules.find(({collection: existingCollection}) => existingCollection === collection) ?? {}),
+          ...(existingRules.find(
+            ({collection: existingCollection}) => existingCollection === collection
+          ) ?? {}),
           collection,
-          memory: memory === "stable" ? "Stable" : "Heap",
+          memory: memory === 'stable' ? 'Stable' : 'Heap',
           ...rest
         }
       })
