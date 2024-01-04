@@ -2,9 +2,9 @@
 
 A local emulator suite to build and test [Juno]'s satellites locally.
 
-> ⚠️ Please note that this project is currently a temporary solution and does not reflect the final form of our objectives. We have several scenarios in mind to ensure a seamless local developer experience, which are included in our roadmap.
->
-> Therefore, please keep in mind that this repository is solely a temporary workaround and may be subject to breaking changes.
+> ⚠️ This project was a temporary solution and is now deprecated.
+> 
+> Use [Juno Docker](https://github.com/junobuild/juno-docker) for local dApp development and E2E tests.
 
 ## Installation
 
